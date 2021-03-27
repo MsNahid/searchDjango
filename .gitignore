@@ -160,3 +160,4 @@ dmypy.json
 #my custom gitignore
 pro_user/
 /pro_user
+/media

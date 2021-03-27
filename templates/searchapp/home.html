@@ -1,0 +1,175 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="container">
+    <form>
+        <!-- Checkbox -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h6>Keywords</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="anis" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Checkbox 1
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Checkbox 2
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Checkbox 3
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h6>User</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Checkbox 1
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Checkbox 2
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Checkbox 3
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h6>Time Range</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Checkbox 1
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Checkbox 2
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Checkbox 3
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- date -->
+        <div class="row mt-4">
+            <h4 class="text-center mb-3">Date</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="startDate">Start date</label>
+                <input type="date" id="startDate" name="startDate">
+            </div>
+            <div class="col-md-6">
+                <label for="endDate">End date</label>
+                <input type="date" id="endDate" name="endDate">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+    </form>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/man.png' %}" class="card-img-top" alt="moon">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h6>Name:</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Age:</h6>
+                        </div>
+                        <div class="col">
+                            <h6>City:</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Monthly Incoming:</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/man.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h6>Name:</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Age:</h6>
+                        </div>
+                        <div class="col">
+                            <h6>City:</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Monthly Incoming:</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/man.png' %}" class="card-img-top" alt="man">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h6>Name:</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Age:</h6>
+                        </div>
+                        <div class="col">
+                            <h6>City:</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Monthly Incoming:</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
