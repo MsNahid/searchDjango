@@ -1,9 +1,5 @@
-
-
 {% extends 'base.html' %}
 {% load static %}
-
-
 
 {% block content %}
 <div class="container">
@@ -94,32 +90,48 @@
     </form>
 
     <div class="row mt-5">
+
+        {% if musicians %}
+
+        {% for musician in musicians  %}
+        <!-- Musicians 1 -->
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/man.png' %}" class="card-img-top" alt="moon">
+                <img src="{{ musician.user_photo.url }}" class="card-img-top" alt="....">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <h6>Name:</h6>
+                            <h6>Name:{{ musician.name }}</h6>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <h6>Age:</h6>
+                            <h6>Age: {{ musician.age }}</h6>
                         </div>
                         <div class="col">
-                            <h6>City:</h6>
+                            <h6>City: {{ musician.city }}</h6>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <h6>Monthly Incoming:</h6>
+                            <h6>Monthly Incoming: ${{ musician.yearly_income }}</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Entry date : {{ musician.list_date }}</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        {% endfor %}
+        {% endif %}
+
+
+
+        <!-- Musicians 2 -->
+        <!-- <div class="col-md-4">
             <div class="card" style="width: 18rem;">
                 <img src="{% static 'img/man.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -143,14 +155,14 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
+        </div> -->
+        <!-- <div class="col-md-4">
             <div class="card" style="width: 18rem;">
                 <img src="{% static 'img/man.png' %}" class="card-img-top" alt="man">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <h6>Name:</h6>
+                            <h6>Name: {{ name }} </h6>
                         </div>
                     </div>
                     <div class="row">
@@ -168,7 +180,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 
