@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% load humanize %}
+
 {% block content %}
 <div class="container">
-    <form>
+    <form action="{% url 'searchapp:home' %}">
         <!-- Checkbox -->
         <div class="row mt-4">
             <div class="col-md-4">
@@ -11,40 +13,40 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="che1" value="anis" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
-                        Checkbox 1
+                        Best( 4 times)
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
                     <label class="form-check-label" for="defaultCheck2">
-                        Checkbox 2
+                       Balam( 5 times)
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
                     <label class="form-check-label" for="defaultCheck2">
-                        Checkbox 3
+                        Love( 2 times)
                     </label>
                 </div>
             </div>
             <div class="col-md-4">
                 <h6>User</h6>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" name="Balam" value="Balam" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
-                        Checkbox 1
+                        Balam
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <input class="form-check-input" type="checkbox" name="Habib" value="Habib" id="defaultCheck2">
                     <label class="form-check-label" for="defaultCheck2">
-                        Checkbox 2
+                       Habib
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <input class="form-check-input" type="checkbox" name="Tapos" value="Tapos" id="defaultCheck2">
                     <label class="form-check-label" for="defaultCheck2">
-                        Checkbox 3
+                       Tapos
                     </label>
                 </div>
             </div>
@@ -65,7 +67,7 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
                     <label class="form-check-label" for="defaultCheck2">
-                        Checkbox 3
+                        3 Years Past
                     </label>
                 </div>
             </div>
@@ -114,12 +116,12 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <h6>Monthly Incoming: ${{ musician.yearly_income }}</h6>
+                            <h6>Monthly Incoming: ${{ musician.yearly_income | intcomma }}</h6>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <h6>Entry date : {{ musician.list_date }}</h6>
+                            <h6>Entry date : {{ musician.list_date | timesince }}</h6>
                         </div>
                     </div>
                 </div>
