@@ -9,6 +9,8 @@ class Musician(models.Model):
     yearly_income = models.IntegerField()
     description = models.TextField()
     list_date = models.DateTimeField(default=datetime.now())
+    keywords = models.CharField(max_length=200, blank=True)
+    keyword_occurrence = models.IntegerField(default=4)
 
     def __str__(self):
         return self.name
